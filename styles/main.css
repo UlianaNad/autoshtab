@@ -365,7 +365,7 @@ hr{
     }
     .item-block{
     display: grid;
-    grid-template-columns: 119px 1fr 1fr 59px;
+    grid-template-columns: 120px 1fr 1fr 59px;
     /* grid-template-areas: "b b b b"; */
     align-items: center;
     justify-items: start;
@@ -387,4 +387,9 @@ hr{
     .item-price{
         width: 80px;
     }
+    .main-wrapper, .main-block , .category{
+        width: calc(100%/12*12);
+        padding: 5px;
+    }
+    
 }
