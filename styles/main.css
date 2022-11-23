@@ -80,7 +80,7 @@
     font-size: 15px;
 }
 .big{
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .search-line{
@@ -92,7 +92,7 @@
 }
 .search-wrapper{
     margin: 0 auto;
-    max-width: 1000px;
+    width: calc(100%/12*10);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -103,16 +103,17 @@
     background-color: rgb(252, 188, 11);
     color: aliceblue;
     border-width: 0;
+    width: calc(100%/12*2);
 }
 .search1{
     color: aliceblue;
 }
 .search-main{
     border-width: 0;
-    width: calc(100%/12*8);
+    width: calc(100%/12*7);
     height: 30px;
     border-radius: 3px;
-    padding-left: 8px;
+    padding-left: 5px;
 }
 .search-button{
     background-color:rgb(252, 188, 11);
@@ -120,25 +121,21 @@
     border-width: 2px;
     border-radius: 3px;
     border-color:  aliceblue;
-    margin-left: 15px;
+    margin-left: 10px;
     height: 30px;
     padding: 5px;
+    width: calc(100%/12*2);
 }
 
-@media screen and (max-width:768px){
-    .menu-button{
-        display: flex;
-      }
-}
 .main-wrapper{
     max-width:1200px;
     margin: 0 auto;
-    padding-top: 10px;
+    padding: 10px;
     display: flex;
 }
 .left-menu{
     width: calc(100%/12*2);
-    min-width: 100px;
+    min-width: 120px;
 }
 .menu-item{
     display: flex;
@@ -173,6 +170,8 @@ span{
 }
 .text-search{
     border: 0;
+    width: calc(100%/12*4);
+
 }
 .mini-menu{
     display: flex;
@@ -200,6 +199,7 @@ span{
     padding: 3px 17px;
     background-color: white;
     font-weight: 500;
+    margin: 3px;
 }
 .bu, .by{
     background-color: orange ;
@@ -239,7 +239,7 @@ label{
 .img-item{
     background-image: url(1-750x470.jpg);
     background-size: cover;
-    width: 120px;
+    min-width: 120px;
     height: 90px;
     background-repeat: no-repeat;
     margin-left: 5px;
@@ -297,7 +297,7 @@ hr{
     height: 15px;
 }
 .add-buscket{
-    min-width: 70px;
+    min-width: 100px;
     height: 30px;
     background-color: orange;
     color: white;
@@ -313,4 +313,78 @@ hr{
 .add-buscket-img{
     width: 17px;
     padding: 3px;
+}
+.menu-burger{
+    display: none;
+    
+}
+.burger{
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    margin: 6px 0;
+}
+.dropdown-category{
+    padding: 5px;
+    border-color: orange;
+    border-width: 2px;
+    border-radius: 3px;
+    width: calc(100%/12*10);
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.category{
+    display: none;
+    padding-left: 20px;
+}
+.adapt-cont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media screen and (max-width:768px){
+   .head-menu,  .item-description, .item-model, .location, .button-group, .main-search,  .left-menu{
+    display: none;
+   }
+   .menu-burger, .category, .main-wrapper {
+    display: block;
+    }
+    .search-line{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .search-wrapper{
+        width: calc(100%/12*12);
+    }
+    .search-button{
+        width: calc(100%/12*3);
+    }
+    .add-buscket{
+        align-self: center;
+    }
+    .item-block{
+    display: grid;
+    grid-template-columns: 119px 1fr 1fr 59px;
+    /* grid-template-areas: "b b b b"; */
+    align-items: center;
+    justify-items: start;
+    }
+    .add-buscket{
+        float: none;
+        min-width: 50px;
+    }
+    .main-block {
+        padding-left: 20px;
+        width: calc(100%/12*11);
+    }
+    .tocart{
+        display: none;
+    }
+    h4{
+        font-size: 12px;
+    }
+    .item-price{
+        width: 80px;
+    }
 }
